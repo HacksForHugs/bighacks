@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409130947) do
+ActiveRecord::Schema.define(version: 20160409144653) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "answer_text"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(version: 20160409130947) do
     t.datetime "updated_at",                          null: false
     t.integer  "level",                  default: 1
     t.integer  "experience",             default: 0
+    t.integer  "type_1_correct",         default: 0
+    t.integer  "type_1_total",           default: 0
+    t.integer  "type_2_correct",         default: 0
+    t.integer  "type_2_total",           default: 0
+    t.integer  "type_3_correct",         default: 0
+    t.integer  "type_3_total",           default: 0
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
