@@ -1,0 +1,15 @@
+<%= form_for @question do |f| %>
+<div class="row">
+  	<%= f.text_field :question_text, :placeholder => 'Example sentence???' %>
+  	<%= f.hidden_field :correct_answer_id, value: nil %>
+  	<%= f.hidden_field :type, value: nil %>
+  	<%= f.text_field :level, :placeholder => 'Example sentence???' %>
+  	<%= f.text_field :a1, :placeholder => 'Example sentence???' %>
+  	<%= f.text_field :a2, :placeholder => 'Example sentence???' %>
+  	<%= f.text_field :a3, :placeholder => 'Example sentence???' %>
+</div>
+<% end %>
+
+<script type="text/javascript">
+
+</script>

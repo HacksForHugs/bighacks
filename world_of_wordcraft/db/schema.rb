@@ -12,7 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20160409130947) do
-
+#TODO:
   create_table "answers", force: :cascade do |t|
     t.string   "answer_text"
     t.integer  "score"
@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 20160409130947) do
   end
 
   add_index "answers", ["question_id"], name: "index_answers_on_question_id"
-
+#TODO:
+# add status enum for approved, approving, or denied
+#default num_correct and num_incorrect to 0
   create_table "questions", force: :cascade do |t|
     t.string   "question_text"
     t.string   "correct_answer_id"

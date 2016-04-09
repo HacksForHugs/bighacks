@@ -1,0 +1,15 @@
+<% @questions.each do |question| %>
+  <div clas="row question">
+  <% if question.type == 1 %>
+    <h3> Select the correct form of the underlined word. </h3>
+  <% elsif question.type == 2 %>
+    <h3> Write three words that could replace the underlined word in this sentence. </h3>
+  <% else %>
+    <h3> Rewrite this sentence to minimize grammatical errors. </h3>
+    <h3><%= question.question_text %></h3>
+    <% question.answer.each do |answer| %>
+      <h3><%= answer.answer_text %></h3>
+    <% end %>
+  </div>
+  <% end %>
+<% end %>
