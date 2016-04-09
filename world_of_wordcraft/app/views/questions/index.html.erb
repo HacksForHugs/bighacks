@@ -7,8 +7,9 @@
   <% else %>
     <h3> Rewrite this sentence to minimize grammatical errors. </h3>
     <h3><%= question.question_text %></h3>
-    <% question.answers.each do |answer| %>
+    <% question.answer.each do |answer| %>
       <h3><%= answer.answer_text %></h3>
     <% end %>
   </div>
+  <% end %>
 <% end %>
